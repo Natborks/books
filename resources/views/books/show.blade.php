@@ -17,11 +17,33 @@
 				    Featured
 				  </div>
 				  <div class="card-body">
+				  	@foreach($book->reviews as $review)
 				    <h5 class="card-title">Special title treatment</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <p class="card-text">Rating: {{$review->rating}}</p>
+				    <p class="card-text">Review: {{$review->review}}</p>
+				    <hr>
+				    @endforeach
 				  </div>
 				</div>
+				<hr>
+				<form method="POST" action="/book/{{$book->isbn}}/reviews">
+					{{ csrf_field() }}
+				  <div class="form-group">
+				    <select class="form-control" name="rating">
+				      <option>1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				    </select>
+				  </div>
+				  <div class="form-group">
+				    <textarea class="form-control" name="review" rows="3"></textarea>
+				  </div>
+				  <div class="form-group">
+				    <button class="btn btn-primary">Submit</button>
+				  </div>
+				</form>
 			</div>
 
 			<div class="col-md-4">

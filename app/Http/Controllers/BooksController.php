@@ -10,17 +10,6 @@ class BooksController extends Controller
 {
     //
     public function index() {
-    	/*if (($handle = fopen ( public_path () . '/books.csv', 'r' )) !== FALSE) {
-	        while ( ($data = fgetcsv ( $handle, 1000, ',' )) !== FALSE ) {
-	            $csv_data = new Book ();
-	            $csv_data->isbn = $data [0];
-	            $csv_data->title = $data [1];
-	            $csv_data->author = $data [2];
-	            $csv_data->year = $data [3];
-	            $csv_data->save ();
-	        }
-        fclose ( $handle );
-    	}*/
 
     	$books = \App\Book::all();
 
@@ -30,7 +19,32 @@ class BooksController extends Controller
     public function show($isbn) {
     	$book = \App\Book::find($isbn);
 
-    	return view('books.show', compact('book'));
+        //$reviews = $book->reviews;
+
+       /* $client = new \GuzzleHttp\Client();
+
+        $result = $client->get("https://www.goodreads.com/book/isbn/ISBN?format=json", [
+            'form_params' => [
+                'format'=> 'json',
+                'user_id' => '12362246',
+                //'title' => "The Dark is Rising",
+                //'key' => 'pUZgFp2Vrq1OZlgyCsFAlA'
+                'isbn' =>'0380795272'
+
+            ]
+        ]);
+        
+        //$body = $result->getHeader('content-type');
+        $body = $result->getBody()->getContents();
+
+    	//dd($reviews);
+
+        
+        return (compact('body'));*/
+
+        //dd($reviews);
+
+        return view('books.show', compact('book'));
     }
 
     

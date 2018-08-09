@@ -19,3 +19,5 @@ Route::get('/index', 'BooksController@index');
 
 Route::get('/book/{isbn}', 'BooksController@show');
 
+Route::post('/book/{book}/reviews', 'ReviewsController@store');
+
