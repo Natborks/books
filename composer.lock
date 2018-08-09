@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
     "content-hash": "1088d10db89e5c954e921cc34e5c8a46",
+
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -367,6 +369,7 @@
             "time": "2018-02-07T20:20:57+00:00"
         },
         {
+
             "name": "guzzlehttp/guzzle",
             "version": "6.3.3",
             "source": {
@@ -547,7 +550,9 @@
             ],
             "time": "2017-03-20T17:10:46+00:00"
         },
+    
         {
+
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -636,6 +641,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v5.6.31",
             "source": {
                 "type": "git",
@@ -771,7 +777,9 @@
                 "framework",
                 "laravel"
             ],
+
             "time": "2018-08-08T20:56:17+00:00"
+
         },
         {
             "name": "laravel/tinker",
@@ -1197,6 +1205,7 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -1247,6 +1256,7 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
+
             "name": "psr/log",
             "version": "1.0.2",
             "source": {

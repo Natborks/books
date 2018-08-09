@@ -20,7 +20,9 @@ class CreateBooksTable extends Migration
             $table->string('author');
             $table->string('year');
             //$table->timestamps();
+
         });
+
     }
 
     /**
